@@ -46,4 +46,8 @@ docker compose down --remove-orphans
 
 ### Once the container is running
 
-- In your browser: navigate to '''localhost:3000'''
+- In your browser: navigate to:
+
+'''bash
+http://localhost:3000
+'''
