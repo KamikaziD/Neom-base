@@ -43,3 +43,7 @@ docker ps
 ```bash
 docker compose down --remove-orphans
 ```
+
+### Once the container is running
+
+- In your browser: navigate to '''localhost:3000'''
