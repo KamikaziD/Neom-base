@@ -2,6 +2,13 @@
 
 Nextjs project for Neom
 
+## Requirements
+
+- [node v18.14.0 LTS](https://nodejs.org/en/)
+- [npm v9.4.0](https://docs.npmjs.com/cli/v9)
+- [docker v20.10.22](https://docs.docker.com/get-docker/)
+- [docker-compose v1.29.2](https://docs.docker.com/compose/install/)
+
 ## Setup
 
 - Clone the repository:
