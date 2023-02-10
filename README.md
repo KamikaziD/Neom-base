@@ -48,6 +48,6 @@ docker compose down --remove-orphans
 
 - In your browser: navigate to:
 
-'''bash
+```bash
 http://localhost:3000
-'''
+```
