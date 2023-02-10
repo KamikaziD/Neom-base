@@ -18,8 +18,28 @@ git clone git@github.com:AO-Group/Neom-2.0.git
 ```
 
 - cd into the Neom2.0 directory
-- Run the following command:
+- Make sure you have docker and docker-compose installed and ready (Docker Desktop works well)
+
+### Build container
   
 ```bash
 COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build
+```
+
+### Run container
+
+```bash
+docker compose up -d
+```
+
+### Check if the container is running
+
+```bash
+docker ps
+```
+
+### Stop the container
+
+```bash
+docker compose down --remove-orphans
 ```
