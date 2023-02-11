@@ -1,0 +1,110 @@
+@import '../../styles//variables/colors.module';
+
+.vimeo_wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  height: 56.25vw;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login_container {
+  height: 100%;
+  background-color: #16171a;
+}
+
+.vimeo_wrapper_landscape {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.login_page__form {
+  position: absolute;
+  top: 50%;
+  right: 296px;
+  transform: translate3d(0, -50%, 0);
+  width: 409px;
+  z-index: 3;
+  border-radius: 16px;
+  background-color: $white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 439.25px;
+  height: 349.41px;
+}
+
+.login_button {
+  cursor: pointer;
+  padding: 21.5px;
+  background: #13100d;
+  border-radius: 10px;
+  border: none;
+  color: $white;
+  font-size: 20px;
+  font-weight: 400;
+  width: 387.61px;
+  bottom: 18px;
+  position: absolute;
+  left: 20px;
+}
+
+.vimeo_wrapper_mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .vimeo_wrapper {
+    display: none !important;
+  }
+
+  .vimeo_wrapper_mobile {
+    display: block !important;
+  }
+
+  .vimeo_iframe_mobile {
+    height: 222vw;
+    min-width: 46vh;
+    width: 100vw;
+    min-width: 177.77vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .login_button {
+    width: 90% !important;
+  }
+
+  .login_page__form {
+    width: 359px;
+    max-width: calc(100vw - 20px);
+    padding: 24px;
+    gap: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0 !important;
+  }
+}

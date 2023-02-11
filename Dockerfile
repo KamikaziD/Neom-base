@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 RUN apk update
-RUN  npm install --production
+RUN  npm install --omit=dev
 
 FROM node:18-alpine AS builder
 WORKDIR /app

@@ -1,0 +1,63 @@
+@import '../../../styles//variables/colors.module';
+@import '../../../styles//styling/app.inputs.module.scss';
+
+.sidebar_container {
+  width: 20rem;
+  padding-bottom: 20px;
+  background: $primary-color;
+  border-radius: 12px;
+  margin-top: 32px;
+}
+
+.logo {
+  background: rgba(48, 48, 48, 0.85);
+  padding: 3px;
+}
+
+.neom_logo {
+  margin: auto;
+}
+.icon_back {
+  padding: 11px;
+  color: $white;
+}
+
+.search_input {
+  @include input($input-color, $white);
+}
+.form_control {
+  margin: 9px;
+  top: 12px;
+}
+
+.icon {
+  color: $white;
+}
+
+.btn_back {
+  color: $white;
+  margin-top: -42px;
+  width: 22px;
+  height: 22px;
+  float: right;
+  background: $input-color;
+  border-radius: 4.88889px;
+  right: -13px;
+  margin-right: -8px;
+}
+
+@media (max-width: 768px) {
+  .sidebar_container {
+    position: absolute !important;
+    bottom: 0;
+    margin: auto;
+    right: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sidebar_container {
+    position: inherit !important;
+    right: auto;
+  }
+}
