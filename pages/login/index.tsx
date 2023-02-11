@@ -1,6 +1,6 @@
 import React from "react";
 import style from "../login/login.module.scss";
-import neom_logo from "../../assets/logos/Logo_Neom.png";
+import neom_logo from "/public/logos/Logo_Neom.png";
 import Image from "next/image";
 
 interface Props {}

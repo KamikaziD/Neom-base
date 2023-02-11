@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "../tabs/tabs.module.scss";
-import oxagon_main from "../../../assets/images/oxagon-main-hero-thumbnail.jpg";
+import oxagon_main from "/public/images/oxagon-main-hero-thumbnail.jpg";
 import Image from "next/image";
 
 const Tabs = () => {

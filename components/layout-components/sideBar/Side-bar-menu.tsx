@@ -2,7 +2,7 @@ import React from "react";
 import style from "../sideBar/side-bar-menu.module.scss";
 import { Props } from "next/dist/client/script";
 import Image from "next/image";
-import neom_logo from "../../../assets/logos/Logo_Neom.png";
+import neom_logo from "/public/logos/Logo_Neom.png";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
