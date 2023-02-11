@@ -17,4 +17,4 @@ app.get("/api", async (req: express.Request, res: express.Response) => {
   res.send("NEOM 2.0 API");
 });
 
-module.exports = app;
+export default app;

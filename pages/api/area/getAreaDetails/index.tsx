@@ -1,20 +1,20 @@
 import express from "express";
-import axios, { HttpStatusCode } from "axios";
+import axios, { AxiosResponse, HttpStatusCode } from "axios";
 
 export default async function handle(
   req: express.Request,
   res: express.Response
 ) {
-  const params: any = req.query.areaId;
+  const params: any = req.query?.areaId;
   const token: string = req.headers.authorization;
   // "Basic V2Fycm9vbTpaN0RhVWZFRA==";
-  console.log(token);
+
   try {
     // if (token !== undefined) {
     //   throw (new Error("Unauthorized").message = "Unauthorized");
     // }
 
-    const response: express.Response = await axios.get(
+    const response: AxiosResponse = await axios.get(
       `https://uatgroundx.neom.com/nuxeo/site/cameraData/getAreaDetails?areaId=${params}`,
       {
         headers: {
@@ -25,7 +25,7 @@ export default async function handle(
       }
     );
 
-    const body = await response.json();
+    const body: JSON = response.data;
 
     res.setHeader("Content-Type", "application/json");
     res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
@@ -33,6 +33,4 @@ export default async function handle(
   } catch (err) {
     res.send({ error: err.message, code: err.statusCode });
   }
-
-  // res.json({ name: "Detmar Ruhfus", areaId: areaId });
 }
