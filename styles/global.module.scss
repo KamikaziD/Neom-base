@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './variables/colors.module';
+@import './styling/app.inputs.module.scss';
+
+
+.text {
+  color: $white;
+}

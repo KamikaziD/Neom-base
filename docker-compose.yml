@@ -1,6 +1,35 @@
 version: '3.8'
 services:
-  web:
+  mysql:
+    container_name: mysql
+    ports:
+      - '3306:3306'
+    platform: linux/x86_64
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: neomapis
+      MYSQL_ROOT_PASSWORD: neomapis
+    volumes:
+      - mysql:/var/lib/mysql
+  # prisma:
+  #   links:
+  #     - mysql
+  #   depends_on:
+  #     - mysql
+  #   container_name: prisma
+  #   ports:
+  #     - '5555:5555'
+  #   build:
+  #     context: ./prisma
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - /app/prisma
+  neom:
+    links:
+      - mysql
+    depends_on:
+      - mysql
     build:
       context: ./
       target: runner
@@ -11,3 +40,7 @@ services:
       - "3000:3000"
     environment:
       NODE_ENV: development
+
+volumes: #define our mysql volume used above
+  mysql:
+  neom:

@@ -1,0 +1,50 @@
+@import '../../../styles//variables//colors.module';
+
+.btn_tab {
+  width: 13rem;
+  background: rgba(235, 192, 63, 0.1);
+  border-radius: 15.88889px;
+  color: $yellow !important;
+  cursor: pointer;
+  margin-left: 11px;
+}
+
+.tab_container {
+  margin-top: 10px;
+}
+
+.image_container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.image_container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.text_tab {
+  color: $gray4;
+  cursor: pointer;
+}
+
+.img_title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: yellow;
+  padding: 14.6667px;
+  height: 67.22px;
+  background: rgba(44, 46, 51, 0.5);
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+}
+
+.neom_image {
+  height: 65px;
+}
