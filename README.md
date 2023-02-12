@@ -23,7 +23,7 @@ git clone git@github.com:AO-Group/Neom-2.0.git
 ### Build container
   
 ```bash
-COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build
+COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker compose build
 ```
 
 ### Run container
