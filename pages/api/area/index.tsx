@@ -1,5 +1,6 @@
 import express from "express";
-import axios, { Axios, AxiosResponse, HttpStatusCode } from "axios";
+import { getSession } from "next-auth/react";
+import axios, { AxiosResponse, HttpStatusCode } from "axios";
 
 export default async function handle(
   req: express.Request,

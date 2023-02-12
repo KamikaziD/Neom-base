@@ -1,5 +1,6 @@
 import express from "express";
 import axios, { AxiosResponse, HttpStatusCode } from "axios";
+// import { getSession } from "next-auth/react";
 
 export default async function handle(
   req: express.Request,
@@ -8,6 +9,10 @@ export default async function handle(
   const params: any = req.query?.areaId;
   const token: string = req.headers.authorization;
   // "Basic V2Fycm9vbTpaN0RhVWZFRA==";
+
+  // const session = await getSession({ req });
+  // const tk = session;
+  // console.log(tk);
 
   try {
     // if (token !== undefined) {
